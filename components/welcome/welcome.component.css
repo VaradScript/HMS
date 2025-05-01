@@ -1,0 +1,367 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Fixed background on scroll */
+  margin: 0;
+  padding: 0;
+  color: #37474f;
+}
+
+/* Optional overlay for better text contrast on the background image */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity as needed */
+  z-index: -1; /* Place behind the content */
+}
+
+.navbar {
+  background-color: rgba(0, 188, 212, 0.8) !important; /* Slightly transparent teal navbar */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 0.8rem 0;
+}
+
+.navbar-brand {
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.welcome-container {
+  max-width: 500px;
+  margin: 5rem auto; /* Increased top margin */
+  padding: 2.5rem;
+  background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white container */
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #e0e0e0;
+}
+
+.welcome-container h1 {
+  color: #00bcd4;
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 0.5px; /* Slightly wider letter spacing */
+}
+
+.login-options {
+  display: flex;
+}
+
+.role-selection-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: rgba(248, 248, 248, 0.85); /* Slightly transparent light gray */
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+.role-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+.role-button {
+  background-color: #e1f5fe;
+  color: #00bcd4;
+  border: 1px solid #b2ebf2;
+  border-radius: 10px;
+  padding: 1.2rem 1.8rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.role-button:hover {
+  transform: scale(1.02); /* Subtle scale-up on hover */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+}
+
+.role-button i {
+  font-size: 1.4rem;
+  margin-right: 1.2rem;
+}
+
+
+.admin-role {
+  background-image: linear-gradient(to right, #4a148c, #8e24aa); /* Deep purple gradient */
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(74, 20, 140, 0.2);
+}
+
+.admin-role:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(74, 20, 140, 0.3);
+}
+
+.doctor-role {
+  background-image: linear-gradient(to right, #00796b, #4db6ac); /* Teal/Green gradient */
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 121, 107, 0.2);
+}
+
+.doctor-role:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(0, 121, 107, 0.3);
+}
+
+.patient-role {
+  background-image: linear-gradient(to right, #c62828, #ef5350); /* Red gradient */
+  color: white;
+  border: none;
+  box-shadow: 0 4px 8px rgba(198, 40, 40, 0.2);
+}
+
+.patient-role:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 14px rgba(198, 40, 40, 0.3);
+}
+
+/* Subtle "swipe" like animation */
+.role-options {
+  position: relative;
+  overflow: hidden; /* Clip the moving element */
+}
+
+.role-button {
+  /* Existing styles */
+  position: relative; /* For absolute positioning of the overlay */
+}
+
+.role-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2); /* Light overlay */
+  transform: skewX(-20deg);
+  transition: left 0.4s ease-in-out;
+  z-index: 1; /* Ensure it's above the button background */
+}
+
+.role-button:hover::before {
+  left: 120%; /* Move the overlay across on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .welcome-container {
+    margin: 2rem;
+    padding: 1.5rem;
+  }
+
+  .welcome-container h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .role-options {
+    gap: 0.8rem;
+  }
+  body{
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    place-items: center;
+    background: 
+    linear-gradient(90deg,
+    rgb(11, 0, 36) 0%,
+    rgba(69, 69, 255, 1) 38%,
+    rgba(0, 212, 255, 1) 100%);
+}
+  
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* Adjust opacity */
+    z-index: -1;
+  }
+  
+  .navbar {
+    background-color: rgba(0, 188, 212, 0.8) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.8rem 0;
+  }
+  
+  .navbar-brand {
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+  
+  .terms-container {
+    max-width: 600px; /* Adjust width as needed */
+    margin: 4rem auto; /* Adjust margin as needed */
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid #e0e0e0;
+    text-align: center; /* Center the initial content */
+  }
+  
+  .hospital-info-title {
+    color: #00bcd4;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hospital-info-text {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    text-align: left; /* Align the terms text to the left for better readability */
+  }
+  
+  .login-options-container {
+    margin-top: 2rem; /* Add some space between the terms and login options */
+    padding: 1.5rem;
+    background-color: rgba(248, 248, 248, 0.85);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    text-align: center; /* Center the login options heading */
+  }
+  
+  .role-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    width: 100%;
+    margin-top: 1rem; /* Add space above the buttons */
+  }
+  
+  .role-button {
+    background-image: linear-gradient(to right, #4a148c, #8e24aa);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    font-weight: 600;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(74, 20, 140, 0.2);
+  }
+  
+  .role-button:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 14px rgba(74, 20, 140, 0.3);
+  }
+  
+  .role-button i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+  
+  .admin-role {
+    background-image: linear-gradient(to right, #4a148c, #8e24aa);
+  }
+  
+  .doctor-role {
+    background-image: linear-gradient(to right, #00796b, #4db6ac);
+  }
+  
+  .patient-role {
+    background-image: linear-gradient(to right, #c62828, #ef5350);
+  }
+  
+  /* Subtle "swipe" like animation */
+  .role-options {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .role-button {
+    position: relative;
+  }
+  
+  .role-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: skewX(-20deg);
+    transition: left 0.4s ease-in-out;
+    z-index: 1;
+  }
+  
+  .role-button:hover::before {
+    left: 120%;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .terms-container {
+      margin: 2rem;
+      padding: 1.5rem;
+    }
+  
+    .hospital-info-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+  
+    .hospital-info-text {
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+  
+    .login-options-container {
+      margin-top: 1.5rem;
+      padding: 1rem;
+    }
+  
+    .role-options {
+      gap: 0.6rem;
+    }
+  
+    .role-button {
+      padding: 0.8rem 1.2rem;
+      font-size: 0.9rem;
+    }
+  
+    .role-button i {
+      font-size: 1rem;
+      margin-right: 0.8rem;
+    }
+  }
+
+  .role-button {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .role-button i {
+    font-size: 1.2rem;
+    margin-right: 1rem;
+  }
+}

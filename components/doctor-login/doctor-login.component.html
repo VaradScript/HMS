@@ -1,0 +1,39 @@
+<nav style="margin:auto; " class="navbar navbar-expand-lg bg-primary">
+    <a style="color: white;" class="navbar-brand" href="#">Welcome to Hospital Management System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Togglenavigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    </nav>
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="Login card p-4 shadow-lg" style="width: 400px;">
+        <form #registerForm="ngForm" (ngSubmit)="doctorLogin()" novalidate>
+            <h2 class="text-center mb-3">Doctor Login</h2>
+
+            <!-- Username Input -->
+            <div class="mb-3">
+                <label class="form-label">Enter Username</label>
+                <input class="form-control" type="text" name="username" placeholder="Enter Name" [(ngModel)]="doctor.username" required #username="ngModel" />
+                <div *ngIf="username.invalid && username.touched" class="text-danger">
+                    Username is required.
+                </div>
+            </div>
+
+            <!-- Password Input -->
+            <div class="mb-3">
+                <label class="form-label">Enter Password</label>
+                <input class="form-control" type="password" name="password" placeholder="Enter Password" [(ngModel)]="doctor.password" required #password="ngModel" />
+                <div *ngIf="password.invalid && password.touched" class="text-danger">
+                    Password is required.
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary w-100" [disabled]="registerForm.invalid">Doctor Login</button>
+                <!-- <button (click)="forgotpass()" class="btn btn-link ">ForgotPassword</button><br> -->
+                <!--<p>Don't have an account?<button (click)="doctorreg()" class="btn btn-link"><b>Create Account</b></button></p>-->
+            
+            </div>
+        </form>
+    </div>
+</div> 

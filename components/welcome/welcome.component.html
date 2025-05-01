@@ -1,0 +1,39 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+<nav class="navbar navbar-expand-lg bg-info">
+  <div class="container">
+    <a class="navbar-brand text-white" href="#">Hospital Management System</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="welcome-container terms-container">
+  <h2 class="text-center mb-3 hospital-info-title">Welcome to Our Hospital Services</h2>
+  <p class="hospital-info-text">
+    By proceeding, you acknowledge and agree to the following terms and conditions regarding access to our portal.
+    This platform provides access for authorized personnel, including administrators, doctors, and patients.
+    Please select your appropriate access level below to continue. Ensure that you have the necessary credentials
+    for your chosen role. Misuse of this system is strictly prohibited and may result in disciplinary action.
+    For any queries or assistance, please contact our support team.
+  </p>
+
+  <div class="login-options-container">
+    <h4 class="mb-3 text-center text-muted">Select Your Access Level</h4>
+    <div class="role-options">
+      <button type="button" class="role-button admin-role" (click)="adminReg()">
+        <i class="bi bi-shield-lock me-2"></i> <span class="role-text">Admin</span>
+      </button>
+      <button type="button" class="role-button doctor-role" (click)="doctorLogin()">
+        <i class="bi bi-heart-pulse me-2"></i> <span class="role-text">Doctor</span>
+      </button>
+      <button type="button" class="role-button patient-role" (click)="patientLogin()">
+        <i class="bi bi-person me-2"></i> <span class="role-text">Patient</span>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<br>
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+    <a style="color: white;" class="navbar-brand" href="#">Nitte Hospita</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Togglenavigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+    </ul>
+</div>
+</nav>
+
+<div class="container mt-4">
+    <h2 class="text-center mb-4">Add New Doctor</h2>
+
+    <form (ngSubmit)="onSubmit()">
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped shadow-sm">
+                <tbody>
+                    <tr>
+                        <td><label class="fw-bold">First Name</label></td>
+                        <td><input type="text" id="firstname" class="form-control" name="firstname" placeholder="Enter firstname" [(ngModel)]="doctor.firstname" /></td>
+                    </tr>
+                    <tr>
+                        <td><label class="fw-bold">Last Name</label></td>
+                        <td><input type="text" id="lastname" class="form-control" name="lastname" placeholder="Enter lastname" [(ngModel)]="doctor.lastname" /></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-success w-50">Submit</button>
+        </div>
+    </form>
+</div>
+
