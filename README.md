@@ -1,4 +1,5 @@
 # HMS
 Hospital management system
 font updated 
--- backend uploading soon .
+-- BACKEND UPLODED STILL SOME OF THE FILES NOT DONE AT 
+
