@@ -1,0 +1,72 @@
+<h1 style="text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: 100;">
+  
+    </h1>
+  <br>
+
+  <nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+    <a style="color: white;" class="navbar-brand" href="#">Nitte Hospita</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" 
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Togglenavigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+      <li class="nav-item">
+        <a style="color: white; "class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/addappointment">Add Appointment</a>
+        </li>
+
+        <li class="nav-item">
+          <a style="color: white; "class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/">logout</a>
+          </li>
+   
+    </ul>
+    </div>
+    </nav>
+    <div class="container">
+    <hr>
+    <h2 style="text-align: center; margin-top: 20PX;">Appointments Dashboard</h2>
+    <a style="color: rgb(86, 86, 86); font-size: x-large;"><marquee behavior="scroll" direction="left">
+    Welcome to Appointments Dashboard. Please find the Appointments list below!!. Click Add Appointments to add new Appointments.</marquee></a>
+    <hr>
+    <a style="color: rgb(86, 86, 86); font-size: xx-large;">Current Appointments List in the Database</a>
+    <div class="tableFixHead">
+      <br>
+
+  <table class="table table-bordered table-dark" >
+        <thead>
+          <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Age</th>
+              
+              
+              <!-- <th>doctor_id</th> -->
+              <th>patient_id</th>
+              <th>Action</th>
+              <th>Update</th>
+              
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let appointments of appointments">
+            <td>{{appointments.id}}</td>
+            <td>{{appointments.firstname}}</td>
+            <td>{{appointments.lastname}}</td>
+            <td>{{appointments.age}}</td>
+            
+            <!-- <td>{{appointments.doctor.id}}</td> -->
+            <td>{{appointments.patient.id}}</td>
+            <td>
+              <button (click)="delete(appointments.id)" class="btn btn-danger">Delete</button>
+            </td>
+            <td>
+              <button (click)="update(appointments.id)">Update</button>
+            </td>
+            
+    
+    </tr>
+          
+        </tbody>
+      </table>

@@ -1,0 +1,58 @@
+<!-- Add Patient Form Container -->
+<div class="form-container">
+  <h2 class="form-title">Add New Patient</h2>
+  <form #addpatientform="ngForm" (ngSubmit)="registerPatient()" class="patient-form">
+    
+    <!-- First Name -->
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input id="firstName" name="firstname" [(ngModel)]="patient.firstName" required class="form-control" />
+      <div *ngIf="addpatientform.submitted && !patient.firstName" class="text-danger">First name is required.</div>
+    </div>
+
+    <!-- Last Name -->
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input id="lastName" name="lastname" [(ngModel)]="patient.lastName" required class="form-control" />
+      <div *ngIf="addpatientform.submitted && !patient.lastName" class="text-danger">Last name is required.</div>
+    </div>
+
+    <!-- Age -->
+    <div class="form-group">
+      <label for="age">Age:</label>
+      <input id="age" name="age" [(ngModel)]="patient.age" required type="number" class="form-control" />
+      <div *ngIf="addpatientform.submitted && !patient.age" class="text-danger">Age is required.</div>
+    </div>
+
+    <!-- Gender -->
+    <div class="form-group">
+      <label for="gender">Gender:</label>
+      <select id="gender" name="gender" [(ngModel)]="patient.gender" required class="form-control">
+        <option value="">Select Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <div *ngIf="addpatientform.submitted && !patient.gender" class="text-danger">Gender is required.</div>
+    </div>
+
+    <!-- Username -->
+    <div class="form-group">
+      <label for="username">Username:</label>
+      <input id="username" name="username" [(ngModel)]="patient.username" required class="form-control" />
+      <div *ngIf="addpatientform.submitted && !patient.username" class="text-danger">Username is required.</div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group">
+      <label for="password">Password:</label>
+      <input id="password" name="password" [(ngModel)]="patient.password" required type="password" class="form-control" />
+      <div *ngIf="addpatientform.submitted && !patient.password" class="text-danger">Password is required.</div>
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-group text-center">
+      <input type="submit" [disabled]="addpatientform.invalid" value="Register Patient" class="btn btn-primary" />
+    </div>
+  </form>
+</div>

@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Nitte Hospital</a>
+    <a class="navbar-brand ms-auto" href="#">Logout</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
+
+<br>
+
+<h2 class="welcome-text">Welcome</h2>
+<h3 class="patient-text">Patient</h3>
+
+<br><br>
+
+<div class="container">
+  <div class="row justify-content-center">
+
+    <!-- View Doctor Card -->
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card text-center shadow-lg card-hover">
+        <div class="card-body">
+          <h5 class="card-title">View Doctor</h5>
+          <br>
+          <button (click)="viewDoctor()" class="btn btn-primary">View Doctor</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- View Appointments Card -->
+    <div class="col-12 col-md-4 mb-4">
+      <div class="card text-center shadow-lg card-hover">
+        <div class="card-body">
+          <h5 class="card-title">View Appointments</h5>
+          <br>
+          <button (click)="viewAppointments()" class="btn btn-primary">View Appointments</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Tips and Instructions Section -->
+<section class="tips-section py-5 bg-light">
+  <div class="container">
+    <h3 class="text-center tips-title mb-4">How to Use the System</h3>
+    <div class="row">
+      <div class="col-12 col-md-6 mb-4">
+        <div class="tip-card shadow-sm p-3 rounded bg-white">
+          <h5 class="tip-title">Viewing Doctors</h5>
+          <p class="tip-text">To view available doctors, simply navigate to the "View Doctor" section from the homepage. You will see a list of doctors along with their specialties and available times. You can read about each doctor’s background and specialties.</p>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 mb-4">
+        <div class="tip-card shadow-sm p-3 rounded bg-white">
+          <h5 class="tip-title">Viewing Appointments</h5>
+          <p class="tip-text">In the "View Appointments" section, you can check all your past and future appointments. You can track the status of each appointment, including whether it has been confirmed, completed, or canceled.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
