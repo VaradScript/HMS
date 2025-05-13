@@ -1,0 +1,59 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg bg-primary text-white px-4">
+    <span class="navbar-brand text-white fw-bold">Welcome to Hospital Management System</span>
+  </nav>
+  
+  <!-- Login Container -->
+  <div class="login-page d-flex justify-content-center align-items-center vh-100">
+    <div class="login-card p-4 shadow rounded">
+      
+      <!-- Header with Icon -->
+      <!-- <div class="text-center mb-4"> -->
+        <!-- <img src="assets/doctor-icon.png" alt="Doctor Icon" class="doctor-icon mb-2" /> -->
+        <h3 class="text-primary">Staff  Login</h3>
+        <p class="text-muted small">Authorized personnel only</p>
+      <!-- </div> -->
+  
+      <!-- Login Form -->
+      <form #registerForm="ngForm" (ngSubmit)="doctorLogin()" novalidate>
+        <!-- Username -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Enter Username</label>
+          <input
+            class="form-control"
+            name="username"
+            placeholder="Enter Name"
+            [(ngModel)]="doctor.username"
+            required
+            #username="ngModel"
+          />
+          <div *ngIf="username.invalid && username.touched" class="text-danger small">
+            Username is required.
+          </div>
+        </div>
+  
+        <!-- Password -->
+        <div class="mb-3">
+          <label class="form-label fw-bold">Enter Password</label>
+          <input
+            type="password"
+            class="form-control"
+            name="password"
+            placeholder="Enter Password"
+            [(ngModel)]="doctor.password"
+            required
+            #password="ngModel"
+          />
+          <div *ngIf="password.invalid && password.touched" class="text-danger small">
+            Password is required.
+          </div>
+        </div>
+  
+        <!-- Login Button -->
+        <button type="submit" class="btn btn-success w-100" [disabled]="registerForm.invalid">
+          <i class="bi bi-box-arrow-in-right me-1"></i> Doctor Login
+        </button>
+      </form>
+    </div>
+  </div>
+  

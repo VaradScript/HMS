@@ -1,0 +1,75 @@
+<h1 style="text-align: center; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; font-weight: 100;">
+  
+    </h1>
+    <br>
+
+<nav style="margin:auto" class="navbar navbar-expand-lg bg-dark">
+<a style="color: white;" class="navbar-brand" href="#">Nitte Hospital</a>
+<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Togglenavigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+  <li class="nav-item">
+    <a style="color: white; "class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/appointmenturl">Appointments</a>
+    </li>
+
+<li class="nav-item">
+<a style="color: white; "class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/add-patient">Add Patients</a>
+</li>
+
+<li class="nav-item">
+  <a style="color: white; "class="nav-link active" aria-current="page" href="javascript:void(0);" routerLink="/">logout</a>
+  </li>
+</ul>
+</div>
+</nav>
+<div class="container">
+<hr>
+<h2 style="text-align: center; margin-top: 20PX;">Patient Dashboard</h2>
+<a style="color: rgb(86, 86, 86); font-size: x-large;"><marquee behavior="scroll" direction="left">
+Welcome to Patient Dashboard. Please find the patient list below!!. Click Appointments to view and add Appointments List.</marquee></a>
+<hr>
+<a style="color: rgb(86, 86, 86); font-size: xx-large;">Current Patient List in the Database</a>
+<div class="tableFixHead">
+  <br>
+
+  <table class="table table-bordered table-dark" >
+        <thead>
+          <tr>
+              <th>ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Age</th>
+              <th>Blood</th>
+              <th>Prescription</th>
+              <th>Dose</th>
+              <th>Urgency</th>
+              <th>Gender</th>
+              <th>Action</th>
+              <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let patient of patients">
+            <td>{{patient.id}}</td>
+            <td>{{patient.firstName}}</td>
+            <td>{{patient.lastName}}</td>
+            <td>{{patient.age}}</td>
+            <td>{{patient.bloodGroup}}</td>
+            <td>{{patient.prescription}}</td>
+            <td>{{patient.dose}}</td>
+            <td>{{patient.urgency}}</td>
+            <td>{{patient.gender}}</td>
+            <td>
+              <button (click)="delete(patient.id)" class="btn btn-danger">Delete</button>
+            </td>
+            <td>
+              <button (click)="update(patient.id)">Update</button>
+            </td>
+    
+    </tr>
+          
+        </tbody>
+      </table>

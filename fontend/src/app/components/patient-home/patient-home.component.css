@@ -1,0 +1,101 @@
+/* Navbar */
+.navbar {
+    padding: 10px 20px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #fff;
+  }
+  
+  /* Welcome Section */
+  .welcome-container {
+    padding: 50px 20px;
+  }
+  
+  .welcome-text {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .patient-text {
+    font-size: 1.8rem;
+    color: #007BFF;
+  }
+  
+  /* Cards Section */
+  .card {
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .card-body {
+    padding: 30px;
+  }
+  
+  .card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tips Section */
+  .tips-section {
+    background-color: #f8f9fa;
+    padding: 50px 20px;
+  }
+  
+  .tips-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007BFF;
+  }
+  
+  .tip-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .tip-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+  }
+  
+  .tip-text {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar-brand {
+      font-size: 1.2rem;
+    }
+  
+    .welcome-text {
+      font-size: 2rem;
+    }
+  
+    .patient-text {
+      font-size: 1.5rem;
+    }
+  }
+  
