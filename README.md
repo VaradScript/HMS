@@ -53,11 +53,17 @@ hms/
 ├── frontend/          # Angular application
 │   ├── src/
 │   ├── package.json
+
+
 ├── database/          # SQL scripts
 │   ├── schema.sql
+
+
 ├── docs/              # Documentation
 │   ├── screenshots/
 │   ├── architecture.md
+
+
 └── README.md          # You are here!
 
 🤝 Contributing
