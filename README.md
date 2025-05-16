@@ -66,7 +66,7 @@ hms/
 
 └── README.md          # You are here!
 
-🤝 Contributing
+# 🤝 Contributing
 Fork the project
 
 Create your feature branch (git checkout -b feature/AmazingFeature)
@@ -77,7 +77,7 @@ Push to the branch (git push origin feature/AmazingFeature)
 
 Open a Pull Request
 
-📜 License
+# 📜 License
 Distributed under the MIT License. See LICENSE for more information.
 
 Project Link: https://github.com/VaradScript/HMS
