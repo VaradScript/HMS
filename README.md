@@ -72,6 +72,6 @@ Open a Pull Request
 📜 License
 Distributed under the MIT License. See LICENSE for more information.
 
-Project Link: https://github.com/your-username/hospital-management-system
+Project Link: https://github.com/VaradScript/HMS
 
 
